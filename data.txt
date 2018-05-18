@@ -1,1 +1,1 @@
-{19: 'Sebbe', 20: 'NP', 21: 'Axel', 22: 'Bananpaj'}
+{19: 'Sebastian Urbath', 20: 'NP', 21: 'anaremilbabayev@gmail.com', 22: 'example@example.com', 23: 'Student', 24: 'Sommarlov yay'}
