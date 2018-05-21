@@ -2,9 +2,10 @@ import smtplib, json
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import date
+import settings
 
 def send(to):
-    json_data=open("credentials.json").read()
+    json_data=open(settings.credentials).read()
     data = json.loads(json_data)
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
@@ -35,4 +36,3 @@ def read(file):
     baker = bakers[week]
     return baker
 
-send(read("data.txt"))
