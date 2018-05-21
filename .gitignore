@@ -106,3 +106,4 @@ venv.bak/
 data.txt
 .gitattributes
 password.txt
+credentials.json
