@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+
+    <h1>Vecka {{ week }}</h1>
+
+    <script>
+        function changeLink(){
+            var e = document.getElementById("bsdbs");
+            var week = e.value;
+            var link = document.getElementById("link");
+            link.setAttribute("href", "/change/?week=" + week)
+
+        }
+    </script>
+
+    <select id="bsdbs" onchange="changeLink()">
+        {% for value in things %}
+            <option value="{{ value }}">{{ "%s: %s" % (value, things[value]) }}</option>
+        {% endfor %}
+    </select>
+
+    <a id="link" href="">Edit this</a>
+    <p>
+        <a href="/welcome/?logout=yes">Log out</a>
+    </p>
+</body>
+</html>
