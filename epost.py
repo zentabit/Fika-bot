@@ -3,9 +3,15 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from datetime import date
 import settings
+import sys
 
 def send(to):
-    json_data=open(settings.credentials).read()
+    try:
+        json_data=open(settings.credentials).read()
+    except:
+        print("No credentials found!")
+        sys.exit(1)
+    
     data = json.loads(json_data)
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
